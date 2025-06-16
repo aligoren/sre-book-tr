@@ -158,9 +158,3 @@ Load testing backend server'ımızın yaklaşık 100 sorgu per saniye (QPS) kald
 Kullanıcı trafiğinin daha yakından incelenmesi peak kullanımımızın global olarak dağıldığını gösterir: Kuzey Amerika'dan 1,430 QPS, Güney Amerika'dan 290, Avrupa ve Afrika'dan 1,400, Asya ve Avustralya'dan 350. Tüm backend'leri tek bir sitede konumlandırmak yerine, bunları ABD, Güney Amerika, Avrupa ve Asya'ya dağıtıyoruz. Bölge başına N+2 redundancy'ye izin vermek ABD'de 17 task, Avrupa'da 16 ve Asya'da 6 task ile sonuçlanır. Ancak, N+2'nin N+1'e olan overhead'ini düşürmek için Güney Amerika'da (5 yerine) 4 task kullanmaya karar veriyoruz.
 
 Backend'lerin veriyi tutan Bigtable ile iletişim kurması gerektiği için, bu storage elementini de stratejik olarak tasarlamamız gerekir. Asya'daki bir backend'in ABD'deki Bigtable ile iletişim kurması önemli miktarda latency ekler, bu yüzden Bigtable'ı her bölgede replika ediyoruz. Bigtable replikasyonu iki şekilde bize yardımcı olur: Bigtable server'ı arızalanırsa resilience sağlar ve veri erişim latency'sini düşürür.
-
-**Chapter 2 tamamlandı!** 🎉
-
-Bu bölümde Google'ın production environment'ının detaylarını, Borg cluster management sistemini, storage katmanlarını (D, Colossus, Bigtable, Spanner), networking altyapısını (Jupiter, B4), monitoring sistemlerini (Borgmon) ve Shakespeare örnek servisi üzerinden bir request'in yaşam döngüsünü öğrendik.
-
-Şimdi Chapter 3'e geçebilirim. Hazır mısın? 
