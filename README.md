@@ -12,7 +12,7 @@
 
 ### **Bölüm II - Prensipler**
 - [Bölüm 3 - Riski Kucaklamak](03_Embracing_Risk.md)
-- Bölüm 4 - Service Level Objective'ler
+- [Bölüm 4 - Service Level Objective'ler](04_Service_Level_Objectives.md)
 - Bölüm 5 - Toil'i Ortadan Kaldırmak
 - Bölüm 6 - Distributed System'leri Monitoring Etmek
 - Bölüm 7 - Google'da Automation'ın Evrimi
