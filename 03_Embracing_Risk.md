@@ -178,6 +178,14 @@ Error budget'ının temel faydası hem product development hem de SRE'nin inovas
 
 Birçok ürün release velocity'yi yönetmek için bu control loop'u kullanır: sistemin SLO'ları karşılandığı sürece, release'ler devam edebilir. SLO violation'ları error budget'ını harcayacak kadar sık meydana gelirse, sistem daha resilient yapmak, performansını artırmak vb. için ek kaynaklar yatırılırken release'ler geçici olarak durdurulur.
 
-**Chapter 3 tamamlandı!** 🎉
+Örneğin, product development test yapmayı azaltmak veya push velocity'yi artırmak istiyorsa ve SRE direniş gösteriyorsa, error budget kararı yönlendirir. Budget büyük olduğunda, product developer'lar daha fazla risk alabilir. Budget neredeyse tükendiğinde, product developer'lar kendileri daha fazla test veya daha yavaş push velocity için bastırır, çünkü budget'ı tüketip launch'larını durdurmak istemezler. Aslında, product development takımı kendi kendini denetler hale gelir. Budget'ı bilirler ve kendi risklerini yönetebilirler. (Tabii ki, bu sonuç SRE takımının SLO bozulursa launch'ları gerçekten durdurma yetkisine sahip olmasına dayanır.)
 
-Bu bölümde SRE'nin temel felsefelerinden birini öğrendik: Riski nasıl kucaklayacağımızı, risk toleransını nasıl belirleyeceğimizi ve Error Budget konseptini. Bu Google SRE yaklaşımının kalbinde yatan "mükemmel güvenilirlik yerine optimal güvenilirlik" anlayışını keşfettik. 
+Network outage'ı veya datacenter arızası ölçülen SLO'yu azaltırsa ne olur? Bu tür olaylar da error budget'ını yer. Sonuç olarak, quarter'ın geri kalanında yeni push'ların sayısı azaltılabilir. Tüm takım bu azalmayı destekler çünkü herkes uptime sorumluluğunu paylaşır.
+
+Budget ayrıca aşırı yüksek güvenilirlik target'larının hem esneklik hem de yavaş inovasyon açısından maliyetlerini vurgulamaya yardımcı olur. Takım yeni özellikler launch etmekte zorlanıyorsa, inovasyonu artırmak için SLO'yu gevşetmeyi (böylece error budget'ını artırmayı) seçebilir.
+
+##### Temel Çıkarımlar
+
+* Servis güvenilirliğini yönetmek büyük ölçüde risk'i yönetmekle ilgilidir ve risk'i yönetmek maliyetli olabilir.
+* %100 muhtemelen asla doğru güvenilirlik target'ı değildir: sadece ulaşılması imkansız olmakla kalmaz, genellikle bir servisin kullanıcılarının istediği veya fark ettiğinden daha fazla güvenilirliktir. Servisin profilini business'ın almaya istekli olduğu riskle eşleştirin.
+* Error budget incentive'leri hizalar ve SRE ile product development arasında ortak sahiplenmeyi vurgular. Error budget'lar release oranına karar vermeyi kolaylaştırır ve stakeholder'larla outage tartışmalarını etkili şekilde etkisizleştirir, ve birden fazla takımın rancor olmadan production risk'i hakkında aynı sonuca varmasını sağlar.
