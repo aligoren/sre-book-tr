@@ -11,7 +11,7 @@
 - [Bölüm 2 - Google'da Production Environment, Bir SRE'nin Bakış Açısından](02_Production_Environment.md)
 
 ### **Bölüm II - Prensipler**
-- Bölüm 3 - Riski Kucaklamak
+- [Bölüm 3 - Riski Kucaklamak](03_Embracing_Risk.md)
 - Bölüm 4 - Service Level Objective'ler
 - Bölüm 5 - Toil'i Ortadan Kaldırmak
 - Bölüm 6 - Distributed System'leri Monitoring Etmek
