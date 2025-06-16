@@ -9,9 +9,9 @@ Eğer bir insan bir operatoru çalıştırıyorsa, o zaman o operatör bozulmuş
 
 SRE'nin temel prensiplerinden biri, engineering işine odaklanmaktır. Engineering işi, uzun vadeli değer üreten, servisin ölçeklenmesini sağlayan ve güvenilirliğini artıran çalışmalardır. Ancak SRE'lerin zamanının önemli bir kısmı _angarya_ adı verilen işlere harcanır.
 
-## Toil Nedir?
+## Angarya Nedir?
 
-Toil, production servislerini çalıştırmakla ilgili olan ancak aşağıdaki özelliklere sahip işlerdir:
+Angarya, production servislerini çalıştırmakla ilgili olan ancak aşağıdaki özelliklere sahip işlerdir:
 
 **Manuel**
 Otomatikleştirilebilir olmasına rağmen manuel olarak gerçekleştirilen işler.
@@ -33,11 +33,11 @@ Servis büyüdükçe angarya de doğrusal olarak büyür.
 
 Eğer yukarıdaki özelliklerden beş veya altısına sahipse, muhtemelen angarya'dir. Eğer sadece birkaçına sahipse, muhtemelen angarya değildir. Örneğin, bir outage sırasında troubleshooting yapmak manuel ve interrupt-driven'dır, ancak genellikle tekrarlayan değildir ve kesinlikle değer katar.
 
-### Toil Her Zaman Kötü Değildir
+### Angarya Her Zaman Kötü Değildir
 
-Toil'in her zaman kötü olduğunu söylemiyoruz. Herkesin biraz angarya'e ihtiyacı vardır; bu, predictable ve manipülatif olabilir ve bazı insanlar için meditasyon benzeri bir kalite taşıyabilir. Toil, yeni takım üyelerinin production'a aşina olmalarına yardımcı olabilir. Ancak angarya'in çok fazla olması kesinlikle kötüdür ve SRE organizasyonumuzun %50 angarya hedefi bu gerçeği yansıtır.
+Angaryanın her zaman kötü olduğunu söylemiyoruz. Herkesin biraz angaryaya ihtiyacı vardır; bu, predictable ve manipülatif olabilir ve bazı insanlar için meditasyon benzeri bir kalite taşıyabilir. Angarya, yeni takım üyelerinin production'a aşina olmalarına yardımcı olabilir. Ancak angaryanın çok fazla olması kesinlikle kötüdür ve SRE organizasyonumuzun %50 angarya hedefi bu gerçeği yansıtır.
 
-### Toil Örnekleri
+### Angarya Örnekleri
 
 Tipik SRE angarya kategorileri şunları içerir:
 
@@ -50,41 +50,41 @@ Tipik SRE angarya kategorileri şunları içerir:
 * Consulting
 * Feature request'ler
 
-## Neden Toil'den Kaçınmalıyız?
+## Neden Angaryadan Kaçınmalıyız?
 
 ### Mühendislik Zamanı Azalır
 
-Toil, engineering projelerine harcanabilecek zamanı tüketir. Engineering projeleri, angarya'i azaltmak, servis güvenilirliğini artırmak veya performansı iyileştirmek için tasarlanmış projelerdir. Daha az engineering zamanı, daha az gelişme anlamına gelir.
+Angarya, engineering projelerine harcanabilecek zamanı tüketir. Engineering projeleri, angaryayı azaltmak, servis güvenilirliğini artırmak veya performansı iyileştirmek için tasarlanmış projelerdir. Daha az engineering zamanı, daha az gelişme anlamına gelir.
 
 ### Kariyerde İlerleme Yavaşlar
 
-Toil'de çok zaman harcayan mühendisler, kariyerlerinde daha yavaş ilerlerler. Google'da, mühendislik işi kariyerde ilerleme için gereklidir. Toil, mühendislerin yeni beceriler öğrenmesini ve karmaşık projeler üzerinde çalışmasını engeller.
+Angaryada çok zaman harcayan mühendisler, kariyerlerinde daha yavaş ilerlerler. Google'da, mühendislik işi kariyerde ilerleme için gereklidir. Angarya, mühendislerin yeni beceriler öğrenmesini ve karmaşık projeler üzerinde çalışmasını engeller.
 
 ### Moral Düşer
 
-İnsanlar genellikle tekrarlayan, manuel işlerden sıkılırlar. Toil, mühendislerin motivasyonunu düşürür ve işten ayrılma oranını artırır.
+İnsanlar genellikle tekrarlayan, manuel işlerden sıkılırlar. Angarya, mühendislerin motivasyonunu düşürür ve işten ayrılma oranını artırır.
 
 ### İlerleme Yavaşlar
 
-Toil, takımların yeni özellikler geliştirmesini ve mevcut sistemleri iyileştirmesini yavaşlatır. Bu, ürünün rekabet gücünü azaltır.
+Angarya, takımların yeni özellikler geliştirmesini ve mevcut sistemleri iyileştirmesini yavaşlatır. Bu, ürünün rekabet gücünü azaltır.
 
 ### Precedent Yaratır
 
-Toil kabul edilirse, daha fazla angarya yaratılır. İnsanlar, mevcut angarya'i görerek yeni angarya yaratmanın kabul edilebilir olduğunu düşünürler.
+Angarya kabul edilirse, daha fazla angarya yaratılır. İnsanlar, mevcut angaryayı görerek yeni angarya yaratmanın kabul edilebilir olduğunu düşünürler.
 
 ### Attrition Yaratır
 
-Toil, yetenekli mühendislerin şirketten ayrılmasına neden olur. Bu, takımın bilgi birikimini azaltır ve yeni mühendis işe alma maliyetlerini artırır.
+Angarya, yetenekli mühendislerin şirketten ayrılmasına neden olur. Bu, takımın bilgi birikimini azaltır ve yeni mühendis işe alma maliyetlerini artırır.
 
 ### Breach of Faith
 
 SRE'ler, engineering işi yapacakları beklentisiyle işe alınırlar. Çok fazla angarya, bu beklentiyi karşılamaz ve güven kaybına neden olur.
 
-## Toil'i Ölçmek
+## Angaryayı Ölçmek
 
-Toil'i ölçmek, onu azaltmak için kritiktir. Google'da, SRE takımları zamanlarının ne kadarını angarya'e harcadıklarını düzenli olarak ölçerler.
+Angaryayı ölçmek, onu azaltmak için kritiktir. Google'da, SRE takımları zamanlarının ne kadarını angaryaya harcadıklarını düzenli olarak ölçerler.
 
-### Toil Ölçüm Yöntemleri
+### Angarya Ölçüm Yöntemleri
 
 **Zaman takibi**
 Mühendisler, zamanlarını nasıl harcadıklarını kaydederler.
@@ -98,7 +98,7 @@ On-call sırasında harcanan zamanın türleri incelenir.
 **Anketler**
 Takım üyeleri, angarya algıları hakkında anket doldururlar.
 
-## Toil'i Ortadan Kaldırma Stratejileri
+## Angaryayı Ortadan Kaldırma Stratejileri
 
 ### Otomatikleştirme
 
@@ -137,11 +137,11 @@ Mevcut süreçleri gözden geçirmek ve iyileştirmek, angarya'i azaltabilir.
 * Monitoring dashboard'ları
 * Automated testing araçları
 
-## Toil'i Ortadan Kaldırmanın Faydaları
+## Angaryayı Ortadan Kaldırmanın Faydaları
 
 ### Mühendislik Zamanı Artar
 
-Toil azaldıkça, mühendisler daha fazla zamanı engineering projelerine ayırabilirler.
+Angarya azaldıkça, mühendisler daha fazla zamanı engineering projelerine ayırabilirler.
 
 ### Güvenilirlik Artar
 
@@ -159,11 +159,11 @@ Otomatikleştirilmiş sistemler, manuel süreçlerden daha iyi ölçeklenir.
 
 Mühendisler, daha ilginç ve değerli işler üzerinde çalışabilirler.
 
-## Toil Azaltma Projeleri
+## Angarya Azaltma Projeleri
 
 ### Proje Seçimi
 
-Toil azaltma projelerini seçerken şu faktörleri göz önünde bulundurun:
+Angarya azaltma projelerini seçerken şu faktörleri göz önünde bulundurun:
 
 **Etki**
 Proje ne kadar angarya azaltacak?
@@ -179,7 +179,7 @@ Proje ne kadar riskli?
 
 ### Proje Yürütme
 
-Toil azaltma projelerini yürütürken:
+Angarya azaltma projelerini yürütürken:
 
 1. **Mevcut durumu ölçün**
 2. **Hedefleri belirleyin**
@@ -190,8 +190,8 @@ Toil azaltma projelerini yürütürken:
 
 ## Sonuç
 
-Toil, SRE'lerin kaçınması gereken ancak tamamen ortadan kaldırılamayan bir gerçekliktir. Amaç, angarya'i makul seviyelerde tutmak ve sürekli olarak azaltmaya çalışmaktır. Bu, mühendislerin daha değerli işler üzerinde çalışmasını sağlar ve organizasyonun genel verimliliğini artırır.
+Angarya, SRE'lerin kaçınması gereken ancak tamamen ortadan kaldırılamayan bir gerçekliktir. Amaç, angaryayı makul seviyelerde tutmak ve sürekli olarak azaltmaya çalışmaktır. Bu, mühendislerin daha değerli işler üzerinde çalışmasını sağlar ve organizasyonun genel verimliliğini artırır.
 
-Toil'i ortadan kaldırmak, sadece bireysel mühendislerin değil, tüm organizasyonun faydasınadır. Daha az angarya, daha fazla innovation, daha iyi güvenilirlik ve daha mutlu mühendisler anlamına gelir.
+Angaryayı ortadan kaldırmak, sadece bireysel mühendislerin değil, tüm organizasyonun faydasınadır. Daha az angarya, daha fazla innovation, daha iyi güvenilirlik ve daha mutlu mühendisler anlamına gelir.
 
-SRE takımları, angarya'i düzenli olarak ölçmeli, azaltma stratejileri geliştirmeli ve bu stratejileri sistematik olarak uygulamalıdır. Bu yaklaşım, SRE'nin temel prensiplerinden biri olan engineering odaklı çalışma kültürünü destekler. 
+SRE takımları, angaryayı düzenli olarak ölçmeli, azaltma stratejileri geliştirmeli ve bu stratejileri sistematik olarak uygulamalıdır. Bu yaklaşım, SRE'nin temel prensiplerinden biri olan engineering odaklı çalışma kültürünü destekler. 
