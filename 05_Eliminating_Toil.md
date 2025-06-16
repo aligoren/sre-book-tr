@@ -1,4 +1,4 @@
-# Bölüm 5 - Toil'i Ortadan Kaldırmak
+# Bölüm 5 - Angaryayı Ortadan Kaldırmak
 
 **Yazan:** Vivek Rau  
 **Editör:** Betsy Beyer
@@ -7,7 +7,7 @@ Eğer bir insan bir operatoru çalıştırıyorsa, o zaman o operatör bozulmuş
 
 > Carla Geisser, Google SRE
 
-SRE'nin temel prensiplerinden biri, engineering işine odaklanmaktır. Engineering işi, uzun vadeli değer üreten, servisin ölçeklenmesini sağlayan ve güvenilirliğini artıran çalışmalardır. Ancak SRE'lerin zamanının önemli bir kısmı _toil_ adı verilen işlere harcanır.
+SRE'nin temel prensiplerinden biri, engineering işine odaklanmaktır. Engineering işi, uzun vadeli değer üreten, servisin ölçeklenmesini sağlayan ve güvenilirliğini artıran çalışmalardır. Ancak SRE'lerin zamanının önemli bir kısmı _angarya_ adı verilen işlere harcanır.
 
 ## Toil Nedir?
 
@@ -20,7 +20,7 @@ Otomatikleştirilebilir olmasına rağmen manuel olarak gerçekleştirilen işle
 Aynı işi tekrar tekrar yapmak.
 
 **Otomatikleştirilebilir**
-Eğer bir insan şu anda yaptığı işi bir makine de yapabiliyorsa, o iş toil'dir.
+Eğer bir insan şu anda yaptığı işi bir makine de yapabiliyorsa, o iş angarya'dir.
 
 **Taktiksel**
 Interrupt-driven ve reactive, stratejik değil.
@@ -29,17 +29,17 @@ Interrupt-driven ve reactive, stratejik değil.
 Servis zamanla aynı durumda kalır. Hiçbir kalıcı iyileştirme gerçekleşmez.
 
 **O(n) ile büyür**
-Servis büyüdükçe toil de doğrusal olarak büyür.
+Servis büyüdükçe angarya de doğrusal olarak büyür.
 
-Eğer yukarıdaki özelliklerden beş veya altısına sahipse, muhtemelen toil'dir. Eğer sadece birkaçına sahipse, muhtemelen toil değildir. Örneğin, bir outage sırasında troubleshooting yapmak manuel ve interrupt-driven'dır, ancak genellikle tekrarlayan değildir ve kesinlikle değer katar.
+Eğer yukarıdaki özelliklerden beş veya altısına sahipse, muhtemelen angarya'dir. Eğer sadece birkaçına sahipse, muhtemelen angarya değildir. Örneğin, bir outage sırasında troubleshooting yapmak manuel ve interrupt-driven'dır, ancak genellikle tekrarlayan değildir ve kesinlikle değer katar.
 
 ### Toil Her Zaman Kötü Değildir
 
-Toil'in her zaman kötü olduğunu söylemiyoruz. Herkesin biraz toil'e ihtiyacı vardır; bu, predictable ve manipülatif olabilir ve bazı insanlar için meditasyon benzeri bir kalite taşıyabilir. Toil, yeni takım üyelerinin production'a aşina olmalarına yardımcı olabilir. Ancak toil'in çok fazla olması kesinlikle kötüdür ve SRE organizasyonumuzun %50 toil hedefi bu gerçeği yansıtır.
+Toil'in her zaman kötü olduğunu söylemiyoruz. Herkesin biraz angarya'e ihtiyacı vardır; bu, predictable ve manipülatif olabilir ve bazı insanlar için meditasyon benzeri bir kalite taşıyabilir. Toil, yeni takım üyelerinin production'a aşina olmalarına yardımcı olabilir. Ancak angarya'in çok fazla olması kesinlikle kötüdür ve SRE organizasyonumuzun %50 angarya hedefi bu gerçeği yansıtır.
 
 ### Toil Örnekleri
 
-Tipik SRE toil kategorileri şunları içerir:
+Tipik SRE angarya kategorileri şunları içerir:
 
 * Interrupt'lar (pager'lar dışında)
 * On-call response'lar
@@ -54,7 +54,7 @@ Tipik SRE toil kategorileri şunları içerir:
 
 ### Mühendislik Zamanı Azalır
 
-Toil, engineering projelerine harcanabilecek zamanı tüketir. Engineering projeleri, toil'i azaltmak, servis güvenilirliğini artırmak veya performansı iyileştirmek için tasarlanmış projelerdir. Daha az engineering zamanı, daha az gelişme anlamına gelir.
+Toil, engineering projelerine harcanabilecek zamanı tüketir. Engineering projeleri, angarya'i azaltmak, servis güvenilirliğini artırmak veya performansı iyileştirmek için tasarlanmış projelerdir. Daha az engineering zamanı, daha az gelişme anlamına gelir.
 
 ### Kariyerde İlerleme Yavaşlar
 
@@ -70,7 +70,7 @@ Toil, takımların yeni özellikler geliştirmesini ve mevcut sistemleri iyileş
 
 ### Precedent Yaratır
 
-Toil kabul edilirse, daha fazla toil yaratılır. İnsanlar, mevcut toil'i görerek yeni toil yaratmanın kabul edilebilir olduğunu düşünürler.
+Toil kabul edilirse, daha fazla angarya yaratılır. İnsanlar, mevcut angarya'i görerek yeni angarya yaratmanın kabul edilebilir olduğunu düşünürler.
 
 ### Attrition Yaratır
 
@@ -78,11 +78,11 @@ Toil, yetenekli mühendislerin şirketten ayrılmasına neden olur. Bu, takımı
 
 ### Breach of Faith
 
-SRE'ler, engineering işi yapacakları beklentisiyle işe alınırlar. Çok fazla toil, bu beklentiyi karşılamaz ve güven kaybına neden olur.
+SRE'ler, engineering işi yapacakları beklentisiyle işe alınırlar. Çok fazla angarya, bu beklentiyi karşılamaz ve güven kaybına neden olur.
 
 ## Toil'i Ölçmek
 
-Toil'i ölçmek, onu azaltmak için kritiktir. Google'da, SRE takımları zamanlarının ne kadarını toil'e harcadıklarını düzenli olarak ölçerler.
+Toil'i ölçmek, onu azaltmak için kritiktir. Google'da, SRE takımları zamanlarının ne kadarını angarya'e harcadıklarını düzenli olarak ölçerler.
 
 ### Toil Ölçüm Yöntemleri
 
@@ -96,13 +96,13 @@ Gelen ticket'ların türleri ve sayıları analiz edilir.
 On-call sırasında harcanan zamanın türleri incelenir.
 
 **Anketler**
-Takım üyeleri, toil algıları hakkında anket doldururlar.
+Takım üyeleri, angarya algıları hakkında anket doldururlar.
 
 ## Toil'i Ortadan Kaldırma Stratejileri
 
 ### Otomatikleştirme
 
-En etkili toil azaltma yöntemi otomatikleştirmedir. Manuel işlemler, script'ler, araçlar veya sistemler aracılığıyla otomatikleştirilebilir.
+En etkili angarya azaltma yöntemi otomatikleştirmedir. Manuel işlemler, script'ler, araçlar veya sistemler aracılığıyla otomatikleştirilebilir.
 
 **Otomatikleştirme Örnekleri:**
 * Deployment pipeline'ları
@@ -121,7 +121,7 @@ Kullanıcıların kendi ihtiyaçlarını karşılayabilecekleri araçlar sağlam
 
 ### Süreç İyileştirme
 
-Mevcut süreçleri gözden geçirmek ve iyileştirmek, toil'i azaltabilir.
+Mevcut süreçleri gözden geçirmek ve iyileştirmek, angarya'i azaltabilir.
 
 **Süreç İyileştirme Örnekleri:**
 * Gereksiz adımları kaldırmak
@@ -166,7 +166,7 @@ Mühendisler, daha ilginç ve değerli işler üzerinde çalışabilirler.
 Toil azaltma projelerini seçerken şu faktörleri göz önünde bulundurun:
 
 **Etki**
-Proje ne kadar toil azaltacak?
+Proje ne kadar angarya azaltacak?
 
 **Çaba**
 Proje ne kadar zaman ve kaynak gerektirecek?
@@ -190,8 +190,8 @@ Toil azaltma projelerini yürütürken:
 
 ## Sonuç
 
-Toil, SRE'lerin kaçınması gereken ancak tamamen ortadan kaldırılamayan bir gerçekliktir. Amaç, toil'i makul seviyelerde tutmak ve sürekli olarak azaltmaya çalışmaktır. Bu, mühendislerin daha değerli işler üzerinde çalışmasını sağlar ve organizasyonun genel verimliliğini artırır.
+Toil, SRE'lerin kaçınması gereken ancak tamamen ortadan kaldırılamayan bir gerçekliktir. Amaç, angarya'i makul seviyelerde tutmak ve sürekli olarak azaltmaya çalışmaktır. Bu, mühendislerin daha değerli işler üzerinde çalışmasını sağlar ve organizasyonun genel verimliliğini artırır.
 
-Toil'i ortadan kaldırmak, sadece bireysel mühendislerin değil, tüm organizasyonun faydasınadır. Daha az toil, daha fazla innovation, daha iyi güvenilirlik ve daha mutlu mühendisler anlamına gelir.
+Toil'i ortadan kaldırmak, sadece bireysel mühendislerin değil, tüm organizasyonun faydasınadır. Daha az angarya, daha fazla innovation, daha iyi güvenilirlik ve daha mutlu mühendisler anlamına gelir.
 
-SRE takımları, toil'i düzenli olarak ölçmeli, azaltma stratejileri geliştirmeli ve bu stratejileri sistematik olarak uygulamalıdır. Bu yaklaşım, SRE'nin temel prensiplerinden biri olan engineering odaklı çalışma kültürünü destekler. 
+SRE takımları, angarya'i düzenli olarak ölçmeli, azaltma stratejileri geliştirmeli ve bu stratejileri sistematik olarak uygulamalıdır. Bu yaklaşım, SRE'nin temel prensiplerinden biri olan engineering odaklı çalışma kültürünü destekler. 
