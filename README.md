@@ -14,8 +14,8 @@
 - [Bölüm 3 - Riski Kucaklamak](03_Embracing_Risk.md)
 - [Bölüm 4 - Service Level Objective'ler](04_Service_Level_Objectives.md)
 - [Bölüm 5 - Angaryayı Ortadan Kaldırmak](05_Eliminating_Toil.md)
-- Bölüm 6 - Distributed System'leri Monitoring Etmek
-- Bölüm 7 - Google'da Automation'ın Evrimi
+- [Bölüm 6 - Distributed System'leri İzlemek](06_Monitoring_Distributed_Systems.md)
+- [Bölüm 7 - Google'da Automation'ın Evrimi](07_Evolution_of_Automation.md)
 - Bölüm 8 - Release Engineering
 - Bölüm 9 - Sadelik
 
